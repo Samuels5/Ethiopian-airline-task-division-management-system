@@ -5,8 +5,13 @@ p {
   margin: 0;
 }
 body {
-  background-color: #f1f0f5;
-  align-items: center;
+    background-image: url('./Ethiopian.jpg');
+    background-size: cover; /* or 'contain', depending on your needs */
+    background-repeat: no-repeat; /* prevents the image from repeating */
+    background-position: center;
+  /* background-color: #f1f0f5;
+  background-image: ;
+  align-items: center; */
 }
 button {
   border: none;
@@ -18,26 +23,38 @@ button {
 }
 .delete-btn {
   background-color: #ff4d4f;
+  width: 120px;
 }
 .delete-btn:hover {
   background-color: #e60000;
 }
 
 .edit-btn {
-  background-color: #4caf50;
+  background-color: yellowgreen;
+  width: 120px;
 }
 
 .edit-btn:hover {
-  background-color: #45a049;
+  background-color: green;
+}
+.edit-btn1 {
+  background-color: yellowgreen;
 }
 
+.edit-btn1:hover {
+  background-color: green;
+}
 #btn {
   background-color: #1c32c3;
-  /* width: 60px; */
+  height:2rem;
+  width: 60px;
 }
 
 #btn:hover {
   background-color: #1627a6;
+}
+h3 {
+  color: #fffcff;
 }
 
 button:hover {
@@ -63,6 +80,8 @@ main {
 
 .task-div {
   margin-top: 10px;
+  margin-bottom: 10px;
+  height: 100%;
   align-items: center;
   border-radius: 14px;
   background-color: white;
@@ -72,7 +91,7 @@ main {
 }
 input {
   border-radius: 14px;
-  background-color: rgb(73, 74, 80);
+  background-color: rgb(223, 226, 239);
   height: 30px;
   padding: 5px 20px 5px 20px;
   border-style: none;
@@ -82,11 +101,51 @@ input {
     display: flex;
 }
 .all {
-    width: 100%;
+    width: 98%;
+    min-height: 77vh;
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* overflow-x: scroll; */
 }
 .new {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: larger;
+  }
+  .new1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    /* font-size: larger; */
+  }
+.div1 {
+    overflow-y: scroll;
+    height: 50vh
+}
+
+.div2 {
+  overflow-y: scroll;
+  height: 50vh;
+}
+.done {
+  background-color: blue;
+}
+.divv{
+  width: 200px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.dd {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.adding {
+  background-color:brown;
+}
+.adding:hover {
+  background-color:rgb(109, 28, 28);
 }

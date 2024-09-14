@@ -38,16 +38,18 @@ function displayTasks() {
       const delete_btn = document.createElement("button");
       edit_btn.className = "edit-btn";
       delete_btn.className = "delete-btn";
-      edit_btn.appendChild(document.createTextNode("Edit"));
-      delete_btn.appendChild(document.createTextNode("Delete"));
+      edit_btn.appendChild(document.createTextNode("Edit name"));
+      delete_btn.appendChild(document.createTextNode("Delete member"));
       edit_btn.style.marginRight = "20px";
       edit_btn.addEventListener("click", () => {
         let edited_content = prompt(
           "Enter the modified to-do?",
           localStorage.getItem("task" + i.toString())
         );
-        edit_btn.parentElement.childNodes[0].innerHTML = edited_content;
+        if (edited_content.length>0) {
+          edit_btn.parentElement.childNodes[1].innerHTML = edited_content;
         localStorage.setItem("task" + i.toString(), edited_content);
+        }
       });
       delete_btn.addEventListener("click", 
         () => {
@@ -60,19 +62,20 @@ function displayTasks() {
       content_paragraph.appendChild(document.createTextNode(task));
       const newdiv = document.createElement("div");
       newdiv.className = "new"
-      newdiv.appendChild(content_paragraph);
       newdiv.appendChild(edit_btn);
+      newdiv.appendChild(content_paragraph);
       newdiv.appendChild(delete_btn);
       const div1 = document.createElement("div");
-      div1.className = "new"
+      div1.className = "dd"
       const user = document.createElement("input");
       div1.appendChild(user)
       const add = document.createElement("button");
-      add.className = "edit-btn";
+      add.className = "adding";
       add.appendChild(document.createTextNode("add"));
       div1.appendChild(add);
 
       const div2 = document.createElement("div");
+      div2.className = "div2"
       add.addEventListener("click", () => {
         if (localStorage.getItem("task-count" + i.toString()) == null) {
             let count = 0;
@@ -104,29 +107,35 @@ function displayTasks() {
             content_paragraph.style.marginRight = "20px";
             const edit_btn = document.createElement("button");
             const delete_btn = document.createElement("button");
-            edit_btn.className = "edit-btn";
-            delete_btn.className = "delete-btn";
+            edit_btn.className = "edit-btn1";
+            delete_btn.className = "done";
             edit_btn.appendChild(document.createTextNode("Edit"));
-            delete_btn.appendChild(document.createTextNode("Delete"));
+            delete_btn.appendChild(document.createTextNode("Done"));
             edit_btn.style.marginRight = "20px";
             edit_btn.addEventListener("click", () => {
                 let edited_content = prompt(
                 "Enter the modified to-do?",
                 localStorage.getItem("task" + i.toString() + + j.toString())
                 );
-                edit_btn.parentElement.childNodes[0].innerHTML = edited_content;
+                if (edited_content.length>0) {
+                  edit_btn.parentElement.parentElement.childNodes[0].innerHTML =
+                    edited_content;
                 localStorage.setItem("task" + i.toString() + j.toString(), edited_content);
+                }
             });
             delete_btn.addEventListener("click", () => {
-                delete_btn.parentElement.remove();
+                delete_btn.parentElement.parentElement.remove();
                 localStorage.removeItem("task" + i.toString() + j.toString());
             });
             content_paragraph.appendChild(document.createTextNode(task));
             const newdiv = document.createElement("div");
-            newdiv.className = "new"
+            const newdiv1 = document.createElement("div");
+            newdiv.className = "new1"
             newdiv.appendChild(content_paragraph);
-            newdiv.appendChild(edit_btn);
-            newdiv.appendChild(delete_btn);
+            newdiv1.appendChild(edit_btn);
+            newdiv1.appendChild(delete_btn);
+            newdiv1.className = 'divv'
+            newdiv.appendChild(newdiv1);
             div2.appendChild(newdiv)
         }}
 
