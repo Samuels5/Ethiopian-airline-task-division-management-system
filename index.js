@@ -49,10 +49,13 @@ function displayTasks() {
         edit_btn.parentElement.childNodes[0].innerHTML = edited_content;
         localStorage.setItem("task" + i.toString(), edited_content);
       });
-      delete_btn.addEventListener("click", () => {
+      delete_btn.addEventListener("click", 
+        () => {
+          const  answer = prompt(`Are you sure you want to delete ${task} ?`,"Yes")
+          if (answer === "Yes"){
         delete_btn.parentElement.remove();
         localStorage.removeItem("task" + i.toString());
-        displayTasks();
+        displayTasks();}
       });
       content_paragraph.appendChild(document.createTextNode(task));
       const newdiv = document.createElement("div");
