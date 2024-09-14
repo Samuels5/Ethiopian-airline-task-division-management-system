@@ -71,7 +71,7 @@ button:hover {
   padding: 2px; 
 }
 main {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,8 +79,8 @@ main {
 }
 
 .task-div {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  /* margin-bottom: 10px; */
   height: 100%;
   align-items: center;
   border-radius: 14px;
@@ -102,7 +102,7 @@ input {
 }
 .all {
     width: 98%;
-    min-height: 77vh;
+    min-height: 72vh;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -122,12 +122,12 @@ input {
   }
 .div1 {
     overflow-y: scroll;
-    height: 50vh
+    height: 40vh
 }
 
 .div2 {
   overflow-y: scroll;
-  height: 50vh;
+  height: 40vh;
 }
 .done {
   background-color: blue;
@@ -148,4 +148,22 @@ input {
 }
 .adding:hover {
   background-color:rgb(109, 28, 28);
+}
+img {
+  width: 100px;
+}
+
+.f {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 768px) {
+    img {
+      display: none;
+    }
+    .all {
+      min-height: 77vh;
+    }
 }
