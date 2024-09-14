@@ -18,6 +18,22 @@ btn.addEventListener("click", () => {
     displayTasks();
   }
 });
+task.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+  if (localStorage.getItem("task-count") == null) {
+    let count = 0;
+    localStorage.setItem("task-count", count.toString());
+  }
+  if (task.value.length > 0) {
+    let task_count = Number(localStorage.getItem("task-count"));
+    task_count += 1;
+    localStorage.setItem("task-count", task_count.toString());
+    localStorage.setItem("task" + task_count.toString(), task.value);
+    task.value = "";
+    displayTasks();
+  }
+  }
+});
 
 function displayTasks() {
   if (localStorage.getItem("task-count") == null) {
@@ -76,6 +92,23 @@ function displayTasks() {
 
       const div2 = document.createElement("div");
       div2.className = "div2"
+
+      user.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+        if (localStorage.getItem("task-count" + i.toString()) == null) {
+            let count = 0;
+            localStorage.setItem("task-count" + i.toString(), count.toString());
+        }
+        if (user.value.length > 0) {
+            let task_count = Number(localStorage.getItem("task-count" + i.toString()));
+            task_count += 1;
+            localStorage.setItem("task-count" + i.toString(), task_count.toString());
+            localStorage.setItem("task" + i.toString() + task_count.toString(), user.value);
+            user.value = "";
+            displayTasks();
+        }
+        }
+      });
       add.addEventListener("click", () => {
         if (localStorage.getItem("task-count" + i.toString()) == null) {
             let count = 0;
