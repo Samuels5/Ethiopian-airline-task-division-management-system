@@ -102,7 +102,7 @@ input {
 }
 .all {
     width: 98%;
-    min-height: 72vh;
+    height: 72vh;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -122,12 +122,12 @@ input {
   }
 .div1 {
     overflow-y: scroll;
-    height: 40vh
+    height: 50vh
 }
 
 .div2 {
   overflow-y: scroll;
-  height: 40vh;
+  height: 50vh;
 }
 .done {
   background-color: blue;
