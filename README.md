@@ -1,5 +1,7 @@
 # Ethiopian-airline-task-division-management-system
 
+uses local storatg to save tasks so that if pc shotdown your files are safe.
+
 link :- https://samuels5.github.io/Ethiopian-airline-task-division-management-system/
 
 ![Screenshot (381)](https://github.com/user-attachments/assets/48dfe9d6-a21c-4c46-b872-4b40f32f72e9)
