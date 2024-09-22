@@ -433,6 +433,7 @@ function displayTasks() {
   }
   const task_divnew = document.createElement("div");
   const task_divnew1 = document.createElement("div");
+  task_divnew1.className = "div21";
   task_divnew.className = "task-div11";
   // console.log(localStorage.getItem("delete"));
   let d = 0
