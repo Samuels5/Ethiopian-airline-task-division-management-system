@@ -234,7 +234,7 @@ function displayTasks() {
             edit_btn.style.marginRight = "20px";
             edit_btn.addEventListener("click", () => {
                 let edited_content = prompt(
-                "Enter the modified task",
+                "Enter the modified tool",
                 localStorage.getItem("task" + i.toString() + j.toString())
                 );
                 if (edited_content.length>0) {
@@ -260,7 +260,7 @@ function displayTasks() {
                 delete_btn1.parentElement.parentElement.remove();
                 const val = localStorage.getItem("task" + i.toString() + j.toString());
                 const num = Number(localStorage.getItem('delete'))
-                localStorage.setItem("delete" + num.toString(),name +" "+ "Future work" + ' ' + localStorage.getItem("task" + i.toString() + j.toString())+ " " + localStorage.getItem("day" + i.toString() + j.toString())+' ' + localStorage.getItem("hour" + i.toString() + j.toString()));
+                localStorage.setItem("delete" + num.toString(),name +" "+ "taken tool" + ' ' + localStorage.getItem("task" + i.toString() + j.toString())+ " " + localStorage.getItem("day" + i.toString() + j.toString())+' ' + localStorage.getItem("hour" + i.toString() + j.toString()));
                 localStorage.setItem('delete',(num+1).toString())
                 localStorage.removeItem("task" + i.toString() + j.toString());
                 displayTasks()}
@@ -372,7 +372,7 @@ function displayTasks() {
                 delete_btn.parentElement.parentElement.remove();
                 const val = localStorage.getItem("task" + i.toString() + j.toString());
                 const num = Number(localStorage.getItem('delete'))
-                localStorage.setItem("delete" + num.toString(),name +" "+ "complited" + ' ' + localStorage.getItem("did" + i.toString() + j.toString())+ " " + localStorage.getItem("day" + i.toString() + j.toString())+' ' + localStorage.getItem("hour" + i.toString() + j.toString()));
+                localStorage.setItem("delete" + num.toString(),name +" "+ "returned tools" + ' ' + localStorage.getItem("did" + i.toString() + j.toString())+ " " + localStorage.getItem("day" + i.toString() + j.toString())+' ' + localStorage.getItem("hour" + i.toString() + j.toString()));
                 localStorage.setItem('delete',(num+1).toString())
                 localStorage.removeItem("did" + i.toString() + j.toString());
                 displayTasks()
@@ -405,7 +405,7 @@ function displayTasks() {
       const d1 = document.createElement('div') 
       d1.className = 'dd1'
       const para1 = document.createElement('p')
-      para1.appendChild(document.createTextNode((count1-1).toString() + ' future work'));
+      para1.appendChild(document.createTextNode((count1-1).toString() + ' taken tools'));
       para1.className = "t1";
       d1.appendChild(para1)
       d1.appendChild(dd1)
@@ -415,7 +415,7 @@ function displayTasks() {
       const d2 = document.createElement('div') 
       d2.className = 'dd2'
       const para1 = document.createElement('p')
-      para1.appendChild(document.createTextNode((count2-1).toString() + ' compited tasks'));
+      para1.appendChild(document.createTextNode((count2-1).toString() + ' returned tools'));
       para1.className = "t1";
       d2.appendChild(para1)
       d2.appendChild(dd2)
