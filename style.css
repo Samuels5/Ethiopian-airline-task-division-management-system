@@ -5,10 +5,10 @@ p {
   margin: 0;
 }
 body {
-    background-image: url('./Ethiopian.jpg');
-    background-size: cover; /* or 'contain', depending on your needs */
-    background-repeat: no-repeat; /* prevents the image from repeating */
-    background-position: center;
+  background-image: url("./Ethiopian.jpg");
+  background-size: cover; /* or 'contain', depending on your needs */
+  background-repeat: no-repeat; /* prevents the image from repeating */
+  background-position: center;
   /* background-color: #f1f0f5;
   background-image: ;
   align-items: center; */
@@ -29,6 +29,24 @@ button {
   background-color: #e60000;
 }
 
+.delete-btn1 {
+  background-color: #ff4d4f;
+  margin-left: 10px;
+  width: 60px;
+}
+.delete-btn1:hover {
+  background-color: #e60000;
+}
+
+.txt {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  margin-right: 15px;
+  padding: 10px;
+}
 .edit-btn {
   background-color: yellowgreen;
   width: 120px;
@@ -46,7 +64,7 @@ button {
 }
 #btn {
   background-color: #1c32c3;
-  height:2rem;
+  height: 2rem;
   width: 60px;
 }
 
@@ -61,14 +79,14 @@ button:hover {
   background-color: rgba(15, 15, 152, 0.643);
 }
 .content_paragraph {
-    /* overflow-x: scroll; */
+  /* overflow-x: scroll; */
   /* width: 200px;
   border-radius: 14px;
   background-color: white;
   height: 17px;
   padding: 10px 20px;
   border-style: none;*/
-  padding: 2px; 
+  padding: 2px;
 }
 main {
   /* margin-top: 20px; */
@@ -80,6 +98,7 @@ main {
 
 .task-div {
   margin-top: 5px;
+  min-width: 500px;
   /* margin-bottom: 10px; */
   height: 100%;
   align-items: center;
@@ -98,41 +117,47 @@ input {
   margin-right: 10px;
 }
 #tasks {
-    display: flex;
+  display: flex;
 }
 .all {
-    width: 98%;
-    height: 72vh;
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    /* overflow-x: scroll; */
+  width: 98%;
+  height: 72vh;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* overflow-x: scroll; */
 }
 .new {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: larger;
-  }
-  .new1 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    /* font-size: larger; */
-  }
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: larger;
+}
+.new1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+  right: 0;
+  /* font-size: larger; */
+}
 .div1 {
-    overflow-y: scroll;
-    height: 50vh
+  overflow-y: scroll;
+  height: 50vh;
 }
 
 .div2 {
   overflow-y: scroll;
   height: 50vh;
 }
+.div22 {
+  overflow-y: scroll;
+  height: 60vh;
+}
 .done {
   background-color: blue;
 }
-.divv{
+.divv {
   width: 200px;
   display: flex;
   justify-content: end;
@@ -144,10 +169,10 @@ input {
   margin-bottom: 20px;
 }
 .adding {
-  background-color:brown;
+  background-color: brown;
 }
 .adding:hover {
-  background-color:rgb(109, 28, 28);
+  background-color: rgb(109, 28, 28);
 }
 img {
   width: 100px;
@@ -158,12 +183,73 @@ img {
   align-items: center;
   justify-content: space-evenly;
 }
-
+.w {
+  display: flex;
+}
+.tot {
+  font-size: 10px;
+  /* width: 100vw; */
+  margin-right: 15px;
+}
+.content_paragraph1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  size: 10px;
+}
 @media only screen and (max-width: 768px) {
-    img {
-      display: none;
-    }
-    .all {
-      min-height: 77vh;
-    }
+  img {
+    display: none;
+  }
+  .all {
+    min-height: 77vh;
+  }
+}
+
+.content_paragraph1 {
+  text-align: center;
+}
+.t1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.dd1 {
+  background-color: green;
+  /* width: 300px; */
+  padding: 5px;
+}
+.dd2 {
+  background-color: blue;
+  padding: 5px;
+}
+.dd3 {
+  background-color: yellow;
+  padding: 5px;
+}
+.just {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hmm {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.task-div11 {
+  margin-top: 5px;
+  min-width: 500px;
+  /* margin-bottom: 10px; */
+  height: 100%;
+  align-items: center;
+  border-radius: 14px;
+  background-color: rgb(255, 93, 93);
+  padding: 10px 5px;
+  border-style: none;
+  margin-right: 10px;
+}
+.ddd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
